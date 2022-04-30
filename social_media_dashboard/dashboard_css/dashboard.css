@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --gn_color:rgb(32,34,47);
+    --card_color:rgb(37,43,67);
+    --card_text_green:rgb(43,122,117);
+    --card_text_red:rgb(148,62,87);
+    --card_line_blue:rgb(28,121,205);
+    --card_line_red:rgb(187,6,43);
+    --card_line_tw:rgb(90,164,210);
+    --tg_bg:rgb(172,177,205);
+    --text_boarder: rgb(48,49,69);
+    --text_pg:rgb(103,111,141);
+    --text_h:white;
+    --toggle_btn:rgb(33,39,61);
+    --toggle_btn_af:rgb(62,196,157);
+    --bg:rgb(248,249,254);
+    --card:rgb(240,243,250);
+    --toggle_text:rgb(8,9,14);
+}
+.main{
+    background-color: var(--gn_color);
+}
+/* card */
+
+.text_hd{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--text_boarder);
+}
+.text_h2{
+    color: var(--text_h);
+    font-size: 2rem;
+}
+.text_pg{
+    color: var(--text_pg);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+
+/* toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--tg_bg);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--toggle_btn);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  input:checked + .slider {
+    background-color:var(--toggle_btn_af);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .dashboard_toggle{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1rem;
+  }
+ 
+  /* card section */
+  .container_section{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .card_gn_dash{
+      background-color:var(--card_color);
+      /* border-radius: 1rem; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top:5px solid var(--card_line_blue);  
+  }
+
+  .gn_2{
+    border-top:5px solid var(--card_line_tw);
+  }
+  .gn_3{
+    border-top:5px solid var(--card_line_red);
+  }
+
+  .card{
+    background-color: var(--card);
+    
+    
+}
+  .card_boarder{
+    margin-top: 1rem;
+    
+  }
+ 
+  .instagram{
+      width: 2rem;
+      height: 2rem;
+  }
+
+  .card-text{
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--text_h);
+      letter-spacing: -.3rem;
+      padding-right: 2rem;
+  }
+
+  .card-followers{
+      letter-spacing: .4rem;
+  }
+
+  /* second section */
+  .mb-top{
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+  }
+
+  .card_dash{
+      border-top:none;
+      display: block;
+      
+  }
+
+  .fx{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.4rem;
+  }
+  .fx-h{
+      font-size: 3rem;
+  }
+  .fx-p{
+    color: var(--text_pg);
+    font-weight: 700;
+  }
+  .fx-p-2{
+      color:var(--card_text_green);
+  }
+
+  .fx_s{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  .text_1{
+    color:var(--toggle_text);
+  }
+
+  .text_2{
+    color:var(--toggle_text);
+  }
+
+  .toggle{
+    background-color: var(--bg);
+}
+
+  @media screen and (min-width:1000px) {
+
+      /* toggle and head */
+      .container_hd{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      .text_hd{
+          border-bottom: none;
+      }
+      .toggle_pg{
+          margin-right: .8rem;
+      }
+
+      /* card section */
+      .container_section{
+          display: flex;
+          flex-wrap: nowrap;
+      }
+      .col-same{
+          margin-left: 4px;
+      }
+
+      /* second section */
+
+
+   
+
+  }
+
+
+
